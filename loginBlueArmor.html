@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./CSS/loginStyle.css">
+    <title>Login BlueArmor</title>
+</head>
+<body>
+    <div class="loginOuter">
+        <div class="loginScreen">
+            <div class="loginHeader">
+                <img src="./images/BluearmorLogo.png" alt="BlueArmor" class="logo-1">
+                <div class="innerLoginHeader">Please login to your account</div>
+            </div>
+            <div class="loginFormOuter">
+                <div class="loginFormInner">
+                    <form action="" class="loginForm">
+                        <div class="formList">
+                            <label for="username">Username </label>
+                            <input type="text" id="username" placeholder="Enter Username..." class="inputField username" required>
+                        </div>
+                        <div class="formList">
+                            <label for="password">Password </label>
+                            <input type="password" id="password" placeholder="Enter Your Password..." class="inputField passwordLogin" required>                        
+                            <a href="./forgetPassword.html" class="forgetPassword">Forgot your password?</a>
+                        </div>
+                        <div class="login">
+                            <a href="./BlueArmor-V1-Dashboard.html" class="loginButton">
+                                <button class="loginBtn" type="button">Login</button>
+                            </a>                        
+                        </div>
+                    </form>
+                </div>
+                <div class="registerGrp">
+                    Don't have an account? <a href="#" class="register">Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="innerImg">
+            <img src="./images/loginImg.png" alt="CyberSecurity">
+        </div>
+    </div>
+    <div class="popup-bg"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/bluearmor.js"></script>
+</body>
+</html>

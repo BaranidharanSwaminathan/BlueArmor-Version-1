@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+body{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -ms-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+}
+label{
+    padding-bottom: 10px;
+    color: #6D6D6D;
+    font-size: 14px;
+}
+.formList a {
+    padding-top: 10px;
+    text-align: right;
+    font-size: 13px;
+    text-decoration: underline;
+    text-decoration-color: #404040;
+    color: black;
+    line-height: 40px;
+}
+.topRight{
+    justify-content: flex-end;
+}
+.topRight img{
+    height: 50px;
+    width: 65%;
+}
+.loginOuter{
+    background: url(../images/login-bg.png) no-repeat center center;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+img.logo-1 {
+    width: 170px;
+}
+.innerImg img{
+    margin-top: 65px;
+}
+.loginFormOuter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+.registerGrp{
+    margin-left: 40px;
+}
+.inputField {
+    background-color: #f4f9fc;
+    height: 33px;
+    width: 278px;
+    border: none;
+    border-bottom: 1px solid #c5c5c5;
+}
+.loginHeader{
+    padding: 30px 20px;
+}
+.innerLoginHeader {
+    font-size: 13px;
+    color: #5c5c5c;
+    font-weight: 100;
+}
+form.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 15px;
+}
+.formList {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.login {
+    margin-top: 10px;
+}
+.loginBtn {
+    background-color: #0093fc;
+    padding: 10px 70px;
+    width: 286px;
+    border-radius: 0;
+    box-shadow: 0px 0px 10px 2px #b8caff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.registerGrp {
+    margin-left: 40px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 36px;
+}
+a.register {
+    color: #0093fc;
+}
+.forgetPassword{
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -ms-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+}

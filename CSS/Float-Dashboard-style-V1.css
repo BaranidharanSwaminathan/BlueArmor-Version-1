@@ -1,0 +1,19 @@
+.container{
+    background-color: unset;
+
+}
+.db-breadcrumb-right {
+    display: flex;
+    flex-direction: row;
+    width: 170px;
+    align-items: center;
+}
+.db-float-breadcrumb {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.dashboard-float-close {
+    margin-left: 20px;
+    cursor: pointer;
+}

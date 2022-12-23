@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueArmour-V1-Dashboard</title>
+    <link rel="Stylesheet" href="./CSS/BlueArmor-V1-Style.css">
+    <link rel="Stylesheet" href="./CSS/Statistics-V1-style.css">
+    <link rel="Stylesheet" href="./CSS/Identities-rules-style-V1.css">
+    <link rel="Stylesheet" href="./CSS/Trust-Level-V1-style.css">
+    <link rel="Stylesheet" href="./CSS/Identity-Management-Style-V1.css">
+    <link rel="Stylesheet" href="./CSS/Float-Dashboard-style-V1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body onload="myFunction()">
+    <div class="outer-bg"></div>
+    <div class="popup-bg"></div>
+    <div class="loader-bg"></div>
+    <div class="loader"></div>
+    <header>
+        <div class="topbar-outer">
+            <div class="topbar-left">
+                <div class="tb-menu-outer">
+                    <img src="./images/Menu.svg" class="menu-icon-topbar" alt="Menu">
+                    <div class="hamburger-menu-list">
+                        <div class="search-box-mobile">
+                            <ion-icon name="search-outline" class="search-icon-mobile"></ion-icon>
+                            <input type="search" class="search-input-mobile" placeholder="Search">
+                        </div>
+                        <a href="./BlueArmor-V1-Dashboard.html">
+                            <div class="hamburger-menu-items dashboard-menu">
+                                <div class="hamburger-menu-icon">
+                                    <img src="./images/Dashboard Icon.svg">
+                                </div>
+                                <span class="hambuger-menu-name">Dashboard</span>
+                            </div>
+                        </a>
+                        <div class="hamburger-menu-items explore-menu menu-active">
+                            <div class="hamburger-menu-icon">
+                                <img src="./images/Explore Icon.svg">
+                                <span class="hambuger-menu-name">Explore</span>
+                            </div>
+                            <div>
+                                <img src="./images/Dropdown Icon.svg" class="exp-dropdown-icon dropdown-icon">
+                            </div>
+                        </div>
+                        <div class="explore-submenu">
+                            <div class="explore-submenu-name submenu-active"><a href="./Identity-Management-V1.html"><span>Identity Management</span></a></div>
+                            <div class="explore-submenu-name"><a href="#"><span>Rules Management</span></a></div>
+                            <div class="explore-submenu-name"><a href="#"><span>Trust Level</span></a></div>
+                            <div class="explore-submenu-name"><a href="#"><span>Resource Management</span></a></div>
+                            <div class="explore-submenu-name"><a href="#"><span>Resource List Management</span></a></div>
+                        </div>
+                        <div class="hamburger-menu-items">
+                            <div class="hamburger-menu-icon">
+                                <img src="./images/Management Network Icon.svg">
+                            </div>
+                            <span class="hambuger-menu-name">Management Network</span>
+                        </div>
+                        <div class="hamburger-menu-items">
+                            <div class="hamburger-menu-icon">
+                                <img src="./images/Gateway Services Icon.svg">
+                            </div>
+                            <span class="hambuger-menu-name">Gateway Services</span>
+                        </div>
+                        <div class="hamburger-menu-items endpoint-menu">
+                            <div class="hamburger-menu-icon">
+                                <img src="./images/Endpoint Icon.svg">
+                                <span class="hambuger-menu-name">Endpoint</span>
+                            </div>
+                            <div>
+                                <img src="./images/Dropdown Icon.svg" class="dropdown-icon">
+                            </div>
+                        </div>
+                        <div class="hamburger-menu-items">
+                            <div class="hamburger-menu-icon">
+                                <img src="./images/Maintenance Icon.svg">
+                            </div>
+                            <span class="hambuger-menu-name">Dashboard</span>
+                        </div>
+                        <div class="hamburger-menu-items">
+                            <div class="hamburger-menu-icon">
+                                <img src="./images/Monitoring Icon.svg">
+                            </div>
+                            <span class="hambuger-menu-name">Monitoring</span>
+                        </div>
+                        <div class="hamburger-menu-items menu-items-mobile">
+                            <div class="hamburger-menu-icon notification-mobile">
+                                <img src="./images/notification-mobile.svg" alt="bell-icon">
+                            </div>
+                            <span class="hambuger-menu-name mobile-menu-name">Notification</span>
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/BlueArmour-logo-2.png" class="bluearmorLogo" alt="BlueArmor-Logo">
+                <div class="bluearmor-icon">
+                    <img src="./images/BlueArmour-logo-2.png" class="bluearmor-icon" alt="BlueArmor-Logo">
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="search-box">
+                    <ion-icon name="search-outline" class="search-icon" ></ion-icon>
+                    <input type="search" class="search-input" placeholder="Search">
+                </div>
+                <div class="notification">
+                    <img src="./images/Notification.svg" alt="bell-icon">
+                </div>
+                <div class="user-details">
+                    <div class="user-name">
+                        <span class="name">Joanne Logan</span>
+                        <span class="user-status">Administrator</span> 
+                    </div>
+                    <div class="user-profile">
+                        <img src="./images/Screenshot 2022-06-23 134619.png" alt="user-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="outer-container">
+        <div class="main-container">
+            <div class="im-breadcrumb">
+                <div class="im-breadcrumb-left">Identity Management</div>
+                <div class="im-breadcrumb-right"><span class="im-explore">Explore > </span> Identity Management</div>
+            </div>
+            <div class="im-toolbar">
+                <div class="im-toolbar-left">
+                    <div class="im-toolbar-left-inner">
+                        <img src="./images/Filter Icon.svg">
+                        <span class="im-filter">Filter</span>
+                    </div>
+                    <div class="im-search">
+                        <img src="./images/Search_light.svg">
+                        <input type="text" placeholder="Search" class="im-search-input">
+                    </div>
+                </div>
+                <div class="im-toolbar-right">
+                    <div class="remove-add">
+                        <div class="remove-btn">
+                            <ion-icon name="close-circle-outline" class="remove-icon"></ion-icon>
+                            <span class="remove">Remove</span>
+                        </div>
+                        <div class="add-btn">
+                            <ion-icon name="add-circle-outline" class="add-icon"></ion-icon>
+                            <span class="add">Add</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box-mobile search-box-mobile-inner">
+                <ion-icon name="search-outline" class="search-icon-mobile search-icon-mobile-inner"></ion-icon>
+                <input type="search" class="search-input-mobile search-input-mobile-inner" placeholder="Search">
+            </div>
+            <div class="im-table">
+                <div class="im-table-header">
+                    <div class="checkbox-header checkbox-width"> <input type="checkbox" class="checkbox"></div>
+                    <div class="action-header action-width">Action</div>
+                    <div class="name-header name-width">Name</div>
+                    <div class="trust-level-header trust-level-width">Trust-Level</div>
+                    <div class="group-header group-width">Group</div>
+                    <div class="enabled-header enabled-width">Enabled</div>
+                    <div class="ip-address-header ip-address-width">IP Address/Prefix  MAC</div>
+                    <div class="comment-header comment-width">Comment</div>
+                    <div class="tcp-header tcp-width">TCP-Tagging</div>
+                    <div class="remote-key-header remote-key-width">Remote Key</div>
+                </div>
+                <div class="im-table-data">
+                    <div class="checkbox-data checkbox-width"> <input type="checkbox" class="checkbox"></div>
+                    <div class="action-data action-width"><img src="./images/im-dotted-hamburgermenu.svg"></div>
+                    <div class="name-data name-width">Alphatrust1</div>
+                    <div class="trust-level-data trust-level-width">
+                        <div class="trust-level-icon level-1">
+                            <span>4</span>
+                        </div>
+                    </div>
+                    <div class="group-data group-width">Identites</div>
+                    <div class="enabled-data enabled-width"><img src="./images/Enabled Icon.svg"></div>
+                    <div class="ip-address-data ip-address-width">100.0.20/32</div>
+                    <div class="comment-data comment-width">Dolor sit amet</div>
+                    <div class="tcp-data tcp-width">SEQ</div>
+                    <div class="remote-key-data remote-key-width">False</div>
+                </div>
+                <div class="im-table-data">
+                    <div class="checkbox-data checkbox-width"> <input type="checkbox" class="checkbox"></div>
+                    <div class="action-data action-width"><img src="./images/im-dotted-hamburgermenu.svg"></div>
+                    <div class="name-data name-width">Alphatrust1</div>
+                    <div class="trust-level-data trust-level-width">
+                        <div class="trust-level-icon level-2">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="group-data group-width">Identites</div>
+                    <div class="enabled-data enabled-width"><img src="./images/Enabled Icon.svg"></div>
+                    <div class="ip-address-data ip-address-width">100.0.20/32</div>
+                    <div class="comment-data comment-width">Dolor sit amet</div>
+                    <div class="tcp-data tcp-width">SEQ</div>
+                    <div class="remote-key-data remote-key-width">False</div>
+                </div>
+                <div class="im-table-data">
+                    <div class="checkbox-data checkbox-width"> <input type="checkbox" class="checkbox"></div>
+                    <div class="action-data action-width"><img src="./images/im-dotted-hamburgermenu.svg"></div>
+                    <div class="name-data name-width">Alphatrust1</div>
+                    <div class="trust-level-data trust-level-width">
+                        <div class="trust-level-icon level-3">
+                            <span>5</span>
+                        </div>
+                    </div>
+                    <div class="group-data group-width">Identites</div>
+                    <div class="enabled-data enabled-width"><img src="./images/Enabled Icon.svg"></div>
+                    <div class="ip-address-data ip-address-width">100.0.20/32</div>
+                    <div class="comment-data comment-width">Dolor sit amet</div>
+                    <div class="tcp-data tcp-width">SEQ</div>
+                    <div class="remote-key-data remote-key-width">False</div>
+                </div>
+                <div class="im-table-data">
+                    <div class="checkbox-data checkbox-width"> <input type="checkbox" class="checkbox"></div>
+                    <div class="action-data action-width"><img src="./images/im-dotted-hamburgermenu.svg"></div>
+                    <div class="name-data name-width">Alphatrust1</div>
+                    <div class="trust-level-data trust-level-width">
+                        <div class="trust-level-icon level-4">
+                            <span>6</span>
+                        </div>
+                    </div>
+                    <div class="group-data group-width">Identites</div>
+                    <div class="enabled-data enabled-width"><img src="./images/Enabled Icon.svg"></div>
+                    <div class="ip-address-data ip-address-width">100.0.20/32</div>
+                    <div class="comment-data comment-width">Dolor sit amet</div>
+                    <div class="tcp-data tcp-width">SEQ</div>
+                    <div class="remote-key-data remote-key-width">False</div>
+                </div>
+                <div class="im-table-data">
+                    <div class="checkbox-data checkbox-width"> <input type="checkbox" class="checkbox"></div>
+                    <div class="action-data action-width"><img src="./images/im-dotted-hamburgermenu.svg"></div>
+                    <div class="name-data name-width">Alphatrust1</div>
+                    <div class="trust-level-data trust-level-width">
+                        <div class="trust-level-icon level-5">
+                            <span>7</span>
+                        </div>
+                    </div>
+                    <div class="group-data group-width">Identites</div>
+                    <div class="enabled-data enabled-width"><img src="./images/Enabled Icon.svg"></div>
+                    <div class="ip-address-data ip-address-width">100.0.20/32</div>
+                    <div class="comment-data comment-width">Dolor sit amet</div>
+                    <div class="tcp-data tcp-width">SEQ</div>
+                    <div class="remote-key-data remote-key-width">False</div>
+                </div>
+                <div class="im-table-data">
+                    <div class="checkbox-data checkbox-width"> <input type="checkbox" class="checkbox"></div>
+                    <div class="action-data action-width"><img src="./images/im-dotted-hamburgermenu.svg"></div>
+                    <div class="name-data name-width">Alphatrust1</div>
+                    <div class="trust-level-data trust-level-width">
+                        <div class="trust-level-icon level-6">
+                            <span>4</span>
+                        </div>
+                    </div>
+                    <div class="group-data group-width">Identites</div>
+                    <div class="enabled-data enabled-width"><img src="./images/Enabled Icon.svg"></div>
+                    <div class="ip-address-data ip-address-width">100.0.20/32</div>
+                    <div class="comment-data comment-width">Dolor sit amet</div>
+                    <div class="tcp-data tcp-width">SEQ</div>
+                    <div class="remote-key-data remote-key-width">False</div>
+                </div>
+                <div class="pagination">
+                    <a class="previousBtn" href="#"><span class="previousIcon"></span></a>
+                    <a class="active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">...</a>                
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a class="nextBtn" href="#"><span class="nextIcon"></span></a>
+                </div>
+            </div>
+            <div class="im-table-ipad-outer">
+                <div class="im-table-ipad">
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Checkbox</div>
+                        </div>
+                        <div class="im-data">
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Action</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/im-dotted-hamburgermenu.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Name</div>
+                        </div>
+                        <div class="im-data">
+                            Alphatrust1
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Trust-Level</div>
+                        </div>
+                        <div class="im-data">
+                            <div class="trust-level-icon level-1">
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Group</div>
+                        </div>
+                        <div class="im-data">
+                            Identities
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Enabled</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/Enabled Icon.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">IP Address/Prefix MAC</div>
+                        </div>
+                        <div class="im-data">
+                            100.0.22/32
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner  im-comment-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Comment</div>
+                        </div>
+                        <div class="im-data im-comment">
+                           Lorem ipsum dolor sit amet consect
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">TCP Tagging</div>
+                        </div>
+                        <div class="im-data">
+                           SEQ
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Remote Keying</div>
+                        </div>
+                        <div class="im-data false">
+                            False
+                        </div>
+                    </div>
+                </div>
+                <div class="im-table-ipad">
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Checkbox</div>
+                        </div>
+                        <div class="im-data">
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Action</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/im-dotted-hamburgermenu.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Name</div>
+                        </div>
+                        <div class="im-data">
+                            Alphatrust1
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Trust-Level</div>
+                        </div>
+                        <div class="im-data">
+                            <div class="trust-level-icon level-1">
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Group</div>
+                        </div>
+                        <div class="im-data">
+                            Identities
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Enabled</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/Enabled Icon.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">IP Address/Prefix MAC</div>
+                        </div>
+                        <div class="im-data">
+                            100.0.22/32
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner  im-comment-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Comment</div>
+                        </div>
+                        <div class="im-data im-comment">
+                           Lorem ipsum dolor sit amet consect
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">TCP Tagging</div>
+                        </div>
+                        <div class="im-data">
+                           SEQ
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Remote Keying</div>
+                        </div>
+                        <div class="im-data false">
+                            False
+                        </div>
+                    </div>
+                </div>
+                <div class="im-table-ipad">
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Checkbox</div>
+                        </div>
+                        <div class="im-data">
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Action</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/im-dotted-hamburgermenu.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Name</div>
+                        </div>
+                        <div class="im-data">
+                            Alphatrust1
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Trust-Level</div>
+                        </div>
+                        <div class="im-data">
+                            <div class="trust-level-icon level-1">
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Group</div>
+                        </div>
+                        <div class="im-data">
+                            Identities
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Enabled</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/Enabled Icon.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">IP Address/Prefix MAC</div>
+                        </div>
+                        <div class="im-data">
+                            100.0.22/32
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner  im-comment-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Comment</div>
+                        </div>
+                        <div class="im-data im-comment">
+                           Lorem ipsum dolor sit amet consect
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">TCP Tagging</div>
+                        </div>
+                        <div class="im-data">
+                           SEQ
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Remote Keying</div>
+                        </div>
+                        <div class="im-data false">
+                            False
+                        </div>
+                    </div>
+                </div>
+                <div class="im-table-ipad">
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Checkbox</div>
+                        </div>
+                        <div class="im-data">
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Action</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/im-dotted-hamburgermenu.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Name</div>
+                        </div>
+                        <div class="im-data">
+                            Alphatrust1
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Trust-Level</div>
+                        </div>
+                        <div class="im-data">
+                            <div class="trust-level-icon level-1">
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Group</div>
+                        </div>
+                        <div class="im-data">
+                            Identities
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Enabled</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/Enabled Icon.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">IP Address/Prefix MAC</div>
+                        </div>
+                        <div class="im-data">
+                            100.0.22/32
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner  im-comment-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Comment</div>
+                        </div>
+                        <div class="im-data im-comment">
+                           Lorem ipsum dolor sit amet consect
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">TCP Tagging</div>
+                        </div>
+                        <div class="im-data">
+                           SEQ
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Remote Keying</div>
+                        </div>
+                        <div class="im-data false">
+                            False
+                        </div>
+                    </div>
+                </div>
+                <div class="im-table-ipad">
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Checkbox</div>
+                        </div>
+                        <div class="im-data">
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Action</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/im-dotted-hamburgermenu.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Name</div>
+                        </div>
+                        <div class="im-data">
+                            Alphatrust1
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Trust-Level</div>
+                        </div>
+                        <div class="im-data">
+                            <div class="trust-level-icon level-1">
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Group</div>
+                        </div>
+                        <div class="im-data">
+                            Identities
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Enabled</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/Enabled Icon.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">IP Address/Prefix MAC</div>
+                        </div>
+                        <div class="im-data">
+                            100.0.22/32
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner  im-comment-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Comment</div>
+                        </div>
+                        <div class="im-data im-comment">
+                           Lorem ipsum dolor sit amet consect
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">TCP Tagging</div>
+                        </div>
+                        <div class="im-data">
+                           SEQ
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Remote Keying</div>
+                        </div>
+                        <div class="im-data false">
+                            False
+                        </div>
+                    </div>
+                </div>
+                <div class="im-table-ipad">
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Checkbox</div>
+                        </div>
+                        <div class="im-data">
+                            <input type="checkbox" class="checkbox">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Action</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/im-dotted-hamburgermenu.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Name</div>
+                        </div>
+                        <div class="im-data">
+                            Alphatrust1
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Trust-Level</div>
+                        </div>
+                        <div class="im-data">
+                            <div class="trust-level-icon level-1">
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Group</div>
+                        </div>
+                        <div class="im-data">
+                            Identities
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Enabled</div>
+                        </div>
+                        <div class="im-data">
+                            <img src="./images/Enabled Icon.svg">
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">IP Address/Prefix MAC</div>
+                        </div>
+                        <div class="im-data">
+                            100.0.22/32
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner  im-comment-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Comment</div>
+                        </div>
+                        <div class="im-data im-comment">
+                           Lorem ipsum dolor sit amet consect
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">TCP Tagging</div>
+                        </div>
+                        <div class="im-data">
+                           SEQ
+                        </div>
+                    </div>
+                    <div class="im-table-ipad-inner">
+                        <div class="im-label">
+                            <div class="checkbox-label">Remote Keying</div>
+                        </div>
+                        <div class="im-data false">
+                            False
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-menu">
+                <div class="floating-outer">
+                    <div class="statistics-menu">
+                        <img src="./images/Statisics Icon.svg">
+                    </div>
+                    <div class="identities-menu">
+                        <img src="./images/Identities Icon.svg">
+                    </div>
+                    <div class="trustlevel-menu">
+                        <img src="./images/TrustLvl Icon.svg">
+                    </div>
+                    <div class="dashboard-float-menu">
+                        <img src="./images/dashboard-float-menu.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="statistics-container-outer">
+                <div class="im-container statistics-container">
+                    <div class="statistics-breadcrumb">
+                        <div class="statistics">Statistics</div>
+                        <div>
+                            <img src="./images/Dashboard Close Icon.svg" alt="close-icon"  class="statistics-close-icon">
+                        </div>
+                    </div>
+                    <div class="statistics-toolbar">
+                        <div class="stat-toolbar-left">
+                            <div class="stat-search-box">
+                                <input type="text" class="stat-search-input" placeholder="Search...">
+                                <img src="./images/Search.svg" class="stat-search-icon">
+                            </div>
+                        </div>
+                        <div class="stat-toolbar-right">
+                            <div class="stat-period">1 Day</div>
+                            <div  class="stat-period stat-week">1 Week</div>
+                            <div class="stat-period">1 Month</div>
+                            <div class="stat-period">6 Month</div>
+                            <div class="stat-period stat-year">1 Year</div>
+                        </div>
+                    </div>
+                    <div class="statistics-content">
+                        <div class="stat-items mg-right">
+                            <div class="stat-details-top tcp-packet ">
+                                <img src="./images/Insert Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">402</span>
+                                <span class="stat-bottom-name">TCP Packet In</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-right">
+                            <div class="stat-details-top tcp-drop">
+                                <img src="./images/icon-collisions.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">7</span>
+                                <span class="stat-bottom-name">TCP Drop In</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-right">
+                            <div class="stat-details-top tcp-forward ">
+                                <img src="./images/Tcp Forward Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">0</span>
+                                <span class="stat-bottom-name">TCP Forward</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-right-ipad">
+                            <div class="stat-details-top tcp-splice ">
+                                <img src="./images/Tcp splice Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">704263425</span>
+                                <span class="stat-bottom-name">TCP Splice</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-tr mg-no-right">
+                            <div class="stat-details-top tcp-splice-tagged">
+                                <img src="./images/Tcp Splice tagged Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">29503251000</span>
+                                <span class="stat-bottom-name">TCP Splice Tagged</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-tr mg-left-ipad">
+                            <div class="stat-details-top tcp-splice-anonymous ">
+                                <img src="./images/Tcp Splice Anonymous Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">19166274399999</span>
+                                <span class="stat-bottom-name">TCP Splice Anonymous</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-tr">
+                            <div class="stat-details-top token-insert">
+                                <img src="./images/Token Insert Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">84418926</span>
+                                <span class="stat-bottom-name">Token Insert</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-top">
+                            <div class="stat-details-top token-validate ">
+                                <img src="./images/Token Validate Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">807101193</span>
+                                <span class="stat-bottom-name">Token Validate</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-tr mg-left-ipad">
+                            <div class="stat-details-top threshold">
+                                <img src="./images/Target_duotone_line.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">424820547</span>
+                                <span class="stat-bottom-name">Threshold Not Met</span>
+                            </div>
+                        </div>
+                        <div class="stat-items mg-tr">
+                            <div class="stat-details-top token-collision">
+                                <img src="./images/Token Collision Icon.svg">
+                            </div>
+                            <div class="stat-details-bottom">
+                                <span class="stat-bottom-value">910090774</span>
+                                <span class="stat-bottom-name">Token Collision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="identies-rules-container-outer">
+                <div class="im-container identies-rules-container">
+                    <div class="identities-rules-outer">
+                        <div class="identities">
+                            <div class="identities-breadcrumb">
+                                <div class="identities-name">Identities</div>
+                                <div>
+                                    <img src="./images/Dashboard Close Icon.svg" alt="close-icon" class="identies-rules-close-icon">
+                                </div>
+                            </div>
+                            <div class="identies-content">
+                                <div class="identities-items">
+                                    <div class="identies-icon-outer hr">
+                                        <img src="./images/Hr Icon.svg">
+                                    </div>
+                                    <div class="identies-value">1</div>
+                                    <div class="identies-name">HR</div>
+                                </div>
+                                <div class="identities-items ">
+                                    <div class="identies-icon-outer marketing">
+                                        <img src="./images/Marketing Icon.svg">
+                                    </div>
+                                    <div class="identies-value">5</div>
+                                    <div class="identies-name">Marketing</div>
+                                </div>
+                                <div class="identities-items ">
+                                    <div class="identies-icon-outer service">
+                                        <img src="./images/Service Icon.svg">
+                                    </div>
+                                    <div class="identies-value">3</div>
+                                    <div class="identies-name">Service</div>
+                                </div>
+                                <div class="identities-items  margin-right">
+                                    <div class="identies-icon-outer accounts">
+                                        <img src="./images/Accounts Icon.svg">
+                                    </div>
+                                    <div class="identies-value">2</div>
+                                    <div class="identies-name">Accounts</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rules-sec">
+                            <div class="rules-breadcrumb">
+                                <div class="rules">Rules</div>
+                            </div>
+                            <div class="rules-content">
+                                <div class="rules-items">
+                                    <div class="rules-icon-outer forward">
+                                        <img src="./images/Forward Icon.svg">
+                                    </div>
+                                    <div class="rules-value">25</div>
+                                    <div class="rules-name">Forward</div>
+                                </div>
+                                <div class="rules-items ">
+                                    <div class="rules-icon-outer discard">
+                                        <img src="./images/Dell_light.svg">
+                                    </div>
+                                    <div class="rules-value">10</div>
+                                    <div class="rules-name">Discard</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="trust-level-container-outer">
+                <div class="im-container trust-level-container">
+                    <div class="trust-level-breadcrumb">
+                        <div class="trust-level">Trust-Level</div>
+                        <div>
+                            <img src="./images/Dashboard Close Icon.svg" alt="close-icon" class="trust-level-close-icon">
+                        </div>
+                    </div>
+                    <div class="test-level-description">
+                        <div class="sum-identities">
+                            <div class="identities-box"></div>
+                            <span>Sum of Identities</span>
+                        </div>
+                        <div class="sum-rules">
+                            <div class="rules-box"></div>
+                            <span>Sum of Rules</span>
+                        </div>
+                    </div>
+                    <div class="trust-level-graph">
+                        <img src="./images/trustlevel.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="container float-db-container">
+                <div class="im-float-container">
+                    <div class="dashboard-breadcrumb">
+                    <div class="db-breadcrumb-left">
+                        <div class="dashboard">Dashboard</div>
+                    </div>
+                    <div class="db-breadcrumb-right">
+                        <div class="db-float-breadcrumb">
+                            <div class="gateway-name">BRGW-I-431</div>
+                            <div class="connected-gateway">Connected Gateway 55</div>
+                        </div>
+                        <div class="dashboard-float-close">
+                            <img src="./images/Dashboard Close Icon.svg" alt="close-icon" class="dashboard-float-close-icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="manage-gateway">
+                        <div class="dashboard-content-header">
+                            <div class="content-heading">Manage Gateway</div>
+                        </div>
+                        <div class="mg-gateway">BRGW-I-431</div>
+                        <div class="serach-add-remove-section">
+                            <div class="mg-search-box">
+                                <input type="text" class="mg-search-input" placeholder="Search...">
+                                <img src="./images/Search.svg" class="mg-search-icon">
+                            </div>
+                            <div class="remove-add">
+                                <div class="remove-btn">
+                                    <ion-icon name="close-circle-outline" class="remove-icon"></ion-icon>
+                                    <span class="remove">Remove</span>
+                                </div>
+                                <div class="add-btn">
+                                    <ion-icon name="add-circle-outline" class="add-icon"></ion-icon>
+                                    <span class="add">Add</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mg-gateway-list">
+                            <div class="mg-gateway-header">
+                                <div class="mg-gateway-header-left">
+                                    <input type="checkbox" class="checkbox">
+                                    <span class="mg-header-name-l">Gateway</span>
+                                </div>
+                                <div class="mg-gateway-header-right">
+                                    <span class="mg-header-name-r">Certificate Expiry</span>
+                                </div>
+                            </div>
+                            <div class="mg-gateway-items-outer">
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                                <div class="mg-gateway-items">
+                                    <div class="mg-gatway-items-left">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="mg-item-name-l">BRGW-I-431</span>
+                                    </div>
+                                    <div class="mg-gatway-items-right">
+                                        <span class="mg-item-name-r">05/09/2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="save-btn">
+                            <button>Save & Continue</button>
+                        </div>
+                    </div>
+                    <div class="summary">
+                        <div class="summary-heading">
+                            <div class="content-heading">Summary</div>
+                            <div class="summary-menu">
+                                <img src="./images/Dotted Hambarekar.svg" alt="menu-icon" class="content-header-menu">
+                            </div>
+                        </div>
+                        <div class="summary-content">
+                            <div class="summary-items">
+                                <div class="sum-content-icon">
+                                    <img src="./images/ITO_light.svg">
+                                </div>
+                                <div class="sum-details">
+                                    <div class="sum-details-top">10.0.10.10</div>
+                                    <div class="sum-details-bottom">Host Name</div>
+                                </div>
+                            </div>
+                            <div class="summary-items">
+                                <div class="sum-content-icon notconfigured-icon-1">
+                                    <img src="./images/Not Configured Icon 1.svg">
+                                </div>
+                                <div class="sum-details">
+                                    <div class="sum-details-top">Not Configured</div>
+                                    <div class="sum-details-bottom">Host Name</div>
+                                </div>
+                            </div>
+                            <div class="summary-items">
+                                <div class="sum-content-icon notconfigured-icon-2">
+                                    <img src="./images/Not Configured Icon 2.svg">
+                                </div>
+                                <div class="sum-details">
+                                    <div class="sum-details-top">Not Configured</div>
+                                    <div class="sum-details-bottom">Host Name</div>
+                                </div>
+                            </div>
+                            <div class="summary-items">
+                                <div class="sum-content-icon alpha">
+                                    <img src="./images/Alpha Icon.svg">
+                                </div>
+                                <div class="sum-details">
+                                    <div class="sum-details-top">Alpha-GW.infovision.io</div>
+                                    <div class="sum-details-bottom">FDQN</div>
+                                </div>
+                            </div>
+                            <div class="summary-items">
+                                <div class="sum-content-icon version">
+                                    <img src="./images/Version Icon.svg">
+                                </div>
+                                <div class="sum-details">
+                                    <div class="sum-details-top">4.3.1.1_1</div>
+                                    <div class="sum-details-bottom">Version</div>
+                                </div>
+                            </div>
+                            <div class="summary-items">
+                                <div class="sum-content-icon clock_light-1">
+                                    <img src="./images/Clock_light Icon.svg">
+                                </div>
+                                <div class="sum-details">
+                                    <div class="sum-details-top">35 hrs, 20 min, 44 sec</div>
+                                    <div class="sum-details-bottom">Uptime</div>
+                                </div>
+                            </div>
+                            <div class="summary-items sum-gateway">
+                                <div class="expiry-box">
+                                    <div class="sum-content-icon clock_light-2">
+                                        <img src="./images/Clock_light Icon.svg">
+                                    </div>
+                                    <div class="sum-details">
+                                        <div class="sum-details-top sum-gateway-details">Fri, Aug 25, 2022 03:15:25 PM</div>
+                                        <div class="sum-details-bottom">Gateway Certificate Expiry</div>
+                                    </div>
+                                </div>
+                                <div class="expiry-hover">
+                                    <div class="expiry-top">Gateway Certificate</div>
+                                    <div class="expiry-bottom">Expiry 30 Days More...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services">
+                        <div class="services-heading">
+                            <div class="content-heading">Services</div>
+                            <div class="services-menu">
+                                <img src="./images/Dotted Hambarekar.svg" alt="menu-icon" class="content-header-menu">
+                            </div>
+                        </div>
+                        <div class="services-items">
+                            <div class="ser-content-icon enabled">
+                                <img src="./images/Done_light.svg">
+                            </div>
+                            <div class="ser-details">
+                                <div class="ser-details-top enabled-name">Enabled</div>
+                                <div class="ser-details-bottom">Distributed Processing</div>
+                            </div>
+                        </div>
+                        <div class="services-items">
+                            <div class="ser-content-icon disabled">
+                                <img src="./images/Disabled Icon.svg">
+                            </div>
+                            <div class="ser-details">
+                                <div class="ser-details-top ">Disabled</div>
+                                <div class="ser-details-bottom">Publisher</div>
+                            </div>
+                        </div>
+                        <div class="services-items">
+                            <div class="ser-content-icon enabled">
+                                <img src="./images/Done_light.svg">
+                            </div>
+                            <div class="ser-details">
+                                <div class="ser-details-top enabled-name">Enabled</div>
+                                <div class="ser-details-bottom">Subscriber</div>
+                            </div>
+                        </div>
+                        <div class="services-items">
+                            <div class="ser-content-icon enabled">
+                                <img src="./images/Done_light.svg">
+                            </div>
+                            <div class="ser-details">
+                                <div class="ser-details-top enabled-name">Enabled</div>
+                                <div class="ser-details-bottom">Layer 3</div>
+                            </div>
+                        </div>
+                        <div class="services-items">
+                            <div class="ser-content-icon disabled">
+                                <img src="./images/Disabled Icon.svg">
+                            </div>
+                            <div class="ser-details">
+                                <div class="ser-details-top">Disabled</div>
+                                <div class="ser-details-bottom">IAS</div>
+                            </div>
+                        </div>
+                        <div class="services-items">
+                            <div class="ser-content-icon disabled">
+                                <img src="./images/Disabled Icon.svg">
+                            </div>
+                            <div class="ser-details">
+                                <div class="ser-details-top">Disabled</div>
+                                <div class="ser-details-bottom">Remote Keying</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filter">
+        <div class="filter-header">
+            <div class="filter-breadcrumb">Filter Option</div>
+            <img src="./images/Dashboard Close Icon.svg" class="filter-close">
+        </div>
+        <div class="filter-form">
+            <div class="form-items">
+                <div class="form-label">Name</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+            <div class="form-items">
+                <div class="form-label">Group</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+            <div class="form-items">
+                <div class="form-label">Trust-Level</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+            <div class="form-items">
+                <div class="form-label">IP Address/Prefix  MAC</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+            <div class="form-items">
+                <div class="form-label">Comment</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+            <div class="form-items">
+                <div class="form-label">TCP-Tagging</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+            <div class="form-items">
+                <div class="form-label">Remote Key</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+            <div class="form-items">
+                <div class="form-label">Enabled</div>
+                <div class="form-data">
+                    <img src="./images/Check_ring_light.svg" class="filter-checkbox"></img>
+                    <input type="text" class="filter-input">
+                </div>
+            </div>
+        </div>
+        <div class="cancel-apply-btns">
+            <button class="filter-cancel">Cancel</button>
+            <button class="filter-apply">Apply</button>
+        </div>
+    </div>
+    <div class="add-identity">
+        <div class="add-identity-header">
+            <div class="add-identity-breadcrumb">Add Identity</div>
+            <img src="./images/Dashboard Close Icon.svg" class="add-identity-close">
+        </div>
+        <div class="add-identity-form">
+            <div class="add-identity-items">
+                <div class="add-identity-label">Name</div>
+                <div class="add-identity-data">
+                    <input type="text" class="add-identity-input">
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">Group</div>
+                <div class="add-identity-data">
+                    <input type="text" class="add-identity-input">
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">Trust-Level</div>
+                <div class="add-identity-data">
+                    <select type="text" class="add-identity-input">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">IP Address</div>
+                <div class="add-identity-data">
+                    <input type="text" class="add-identity-input">
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">MAC</div>
+                <div class="add-identity-data">
+                    <input type="text" class="add-identity-input">
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">Comment</div>
+                <div class="add-identity-data">
+                    <input type="text" class="add-identity-input">
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">TCP Tagging</div>
+                <div class="add-identity-data">
+                    <select type="text" class="add-identity-input">
+                        <option value="SEQ">SEQ</option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">Remote Key</div>
+                <div class="add-identity-data">
+                    <select type="text" class="add-identity-input">
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-identity-items">
+                <div class="add-identity-label">Enabled</div>
+                <div class="add-identity-data">
+                    <select type="text" class="add-identity-input">
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="add-identity-btns cancel-apply-btns">
+            <button class="add-cancel">Cancel</button>
+            <button class="add-apply">Apply</button>
+        </div>
+    </div>
+    <footer>
+        <span>© 2022 Bluearmor | All Rights Reserved</span>
+    </footer>
+    <script src="./JS/Identity-Management-JS.js"></script>
+    <script src="./JS/BlueArmor-V1-JS.js"></script>
+</body>
